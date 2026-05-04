@@ -1,4 +1,4 @@
-\documentclass[apaper,20pt]{article}
+\documentclass[apaper,10pt]{article}
 \def\labelitemi{$\circ$}
 \usepackage{latexsym}
 \usepackage{xcolor}
@@ -7,265 +7,178 @@
 \usepackage{marvosym}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage{fontawesome5} % for using icons
+\usepackage{fontawesome5}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
-\usepackage{graphicx} % for reflecting the phone icon
+\usepackage{graphicx}
 \definecolor{primaryColor}{RGB}{0, 79, 144}
-\newcommand{\colorBoxBlue}[1]{\colorbox[RGB]{0,191,255}{#1}}
-\newcommand{\colorBoxMustard}[1]{\colorbox[RGB]{255,187,0}{#1}}
-\newcommand{\colorBoxGreen}[1]{\colorbox[RGB]{93,226,60}{#1}}
-	
+
 \hypersetup{
     colorlinks=true,
     linkcolor=primaryColor,
-    filecolor=magenta,      
-    urlcolor= blue,
-    pdftitle={Overleaf Example},
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={Nitish Sharma Resume},
     pdfpagemode=FullScreen,
-    }
+}
 \newcommand{\MYhref}[3][primaryColor]{\href{#2}{{\color{#1}#3}}}
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-
-% Adjust margins
+% Tightened margins for one page
 \addtolength{\oddsidemargin}{-0.530in}
 \addtolength{\evensidemargin}{-0.375in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.6in}
-\addtolength{\textheight}{1in}
-
+\addtolength{\topmargin}{-.75in}
+\addtolength{\textheight}{1.4in}
 
 \urlstyle{rm}
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-
-% Sections formatting
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-%-------------------------
-% Custom commands
 \newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
-}
-
-
-\newcommand{\resumeItemWithoutTitle}[1]{
-  \item\small{
-    {\vspace{-2pt}}
-  }
+  \item\small{\textbf{#1}{: #2 \vspace{-2pt}}}
 }
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{#3} & \textit{#4} \\
+      \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
 }
-
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
 \renewcommand{\labelitemii}{$\circ$}
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[topsep=0pt,itemsep=-1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
 
-
-%-----------------------------
 %%%%%%  CV STARTS HERE  %%%%%%
 
-
 \begin{document}
-
 
 %----------HEADING-----------------
 \begin{center}
     \textbf{\Huge \scshape Nitish Sharma} \\ \vspace{5pt}
-    \MYhref{tel:+917087491353}{\reflectbox{\faPhone}\ +91-7087491353} \quad  
-    \MYhref{mailto:nitish.sharma1186@gmail.com}{\faEnvelope\ nitish.sharma1186@gmail.com} \quad 
-    \MYhref{https://maps.app.goo.gl/rMSBQRqs4LkHJ8Jf6}{\faMapMarker*\ Noida, India}\\ \vspace{5pt}
-    \MYhref{https://github.com/itsnitish22}{\faGithub\ github.com/itsnitish22} \quad 
-    \MYhref{https://www.linkedin.com/in/itsnitish22/}{\faLinkedin\ linkedin.com/in/itsnitish22} \quad
-    
+    \MYhref{tel:+917087491353}{\reflectbox{\faPhone}\ +91-7087491353} \quad
+    \MYhref{mailto:nitish.sharma1186@gmail.com}{\faEnvelope\ nitish.sharma1186@gmail.com} \quad
+    \MYhref{https://shorturl.at/JLgeY}{\faMapMarker*\ Mumbai, India} \\ \vspace{3pt}
+    \MYhref{https://github.com/itsnitish22}{\faGithub\ github.com/itsnitish22} \quad
+    \MYhref{https://www.linkedin.com/in/itsnitish22/}{\faLinkedin\ linkedin.com/in/itsnitish22}
 \end{center}
 
+\vspace{-10pt}
 
-
-
-%-----------EXPERIENCE----------------
-
-
+%-----------EXPERIENCE-----------------
 \section{Experience}
-\vspace{2pt}
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{Visit Health}{Noida $\circ$ On-Site}
-{SDE -1 (Android)}{May 2024 - Present}
-\begin{itemize}
-\item {Spearheaded growth of Visit's Android app from 500K to 1M+ downloads with a 99.46\% crash-free users, delivering a seamless user experience.}
-    \item {Designed and developed wrapper functions to streamline API calls and state observation, transforming raw data into reactive streams, reducing redundant emissions, simplifying API configuration logic and maintainable code.}
-	\item {Led knowledge sharing on Epoxy \& it's best practices, streamlining development of complex data-driven RecyclerViews and cutting dev time by half.}
-	\item {Built and launched features (including but not limited to) Online Consultation Chat, In App Feedbacks, Self Booking Appointments, Cashless Savings, Prescription-Invoice-LabReports Query Chat, Corporate Policies.}
-\end{itemize}
-\vspace{-3pt}
+  {Mythik Entertainment}{Mumbai $\circ$ On-Site}
+  {SDE-2 Android}{Sept 2025 -- Present}
+  \vspace{2pt}
+\resumeItemListStart
+  \item\small{Engineered Mythik+ PSFC video using Jetpack Compose \& Media3. Implemented robust preloading, ABR streaming, and Widevine DRM (L1--L3), reducing TTFF and playback latency across device tiers.}
+  \item\small{Architected dynamic track selection across network conditions \& hardware decoders (AV1, H.265, H.264), ensuring smooth playback on low-to-high end devices.}
+  \item\small{Integrated Google Play Billing Library end-to-end, managed one-time purchase flows, entitlement validation, and edge-case states to ensure zero revenue leakage.}
+\resumeItemListEnd
 
 \resumeSubheading
-{GeeksforGeeks}{Noida $\circ$ On-Site}
-{Android Developer Intern }{June 2023 - May 2024}
-\begin{itemize}
-    \item {Led development of key features, including the GfG Jobs Portal, Tool Tips, Community Comments, Anonymous Posting, Account Deletion, Global App Search, Explore Section, SplashScreen API, and Roadmaps, improving user engagement by 55\%.}
-    \item {Accelerated cold start time of GfG app by 36\% by identifying and resolving main thread bottlenecks and UI rendering problems.}
-	\item {Revamped Discuss Section, reducing LOC by 2x, while improving pagination, leading to a faster comments rendering.}
-	\item {Created efficient UIs via Epoxy with two-way data binding, streamlining view variables, and state management reducing bounce back rate by 67\%.}
-\end{itemize}
-\vspace{-3pt}
+  {Visit Health}{Noida $\circ$ On-Site}
+  {SDE-1 Android}{May 2024 -- Aug 2025}
+  \vspace{2pt}
+\resumeItemListStart
+  \item\small{Spearheaded growth of Visit's Android app from 500K to 1M+ downloads with a 99.46\% crash-free rate, delivering a seamless user experience.}
+  \item\small{Designed wrapper functions to streamline API calls and state observation, transforming raw data into reactive streams and reducing redundant emissions.}
+  \item\small{Built and launched features including Online Consultation Chat, Self Booking, Cashless Savings, Prescription Query Chat, and Corporate Policies.}
+\resumeItemListEnd
 
 \resumeSubheading
-{FRND}{Bengaluru $\circ$ Remote}
-{Android Developer Intern }{December 2022 - March 2023}
-\begin{itemize}
-	\item {Refactored code from RxJava to Coroutines \& Kotlin Flows while adhering to Clean Architecture principles.}
-    \item {Implemented Domain Logic Segregation into distinct packages and classes, enhancing navigation efficiency by 2x.}
-	\item {Utilized SDKs to capture User Events with a focus on optimizing UX using Deeplinks \& Deferred Deeplinks.}
-	\item {Facilitated Whale-to-Top User connections with an aim to improve user Engagement/Retention and Revenue.}
-\end{itemize}
-\vspace{-3pt}
+  {GeeksforGeeks}{Noida $\circ$ On-Site}
+  {Android Developer Intern}{June 2023 -- May 2024}
+  \vspace{2pt}
+\resumeItemListStart
+  \item\small{Led development of GfG Jobs Portal, Community Comments, Global App Search, Explore Section, and Roadmaps improving user engagement by 55\%.}
+  \item\small{Accelerated cold start time by 36\% by resolving main thread bottlenecks and UI rendering problems.}
+  \item\small{Revamped Discuss Section, reducing LOC by 2x while improving pagination and comment rendering speed.}
+\resumeItemListEnd
 
 \resumeSubheading
-{Finocado by Startup Bay}{Ireland $\circ$ Remote}
-{Android Developer Intern }{Feburary 2022 - June 2022}
-\begin{itemize}
-    \item {Leveraged Firebase for Database, Crashlytics \& Analytics. Optimized application through thorough analysis and refinement.}
-	\item {Developed and consumed REST APIs via Retrofit. Used MVVM and Components of Android Jetpack.}
-	\item {Built CI/CD Pipeline using Github Actions for deploying the updated app to the testers on Firebase.}
-\end{itemize}
-\vspace{-3pt}
+  {FRND}{Bengaluru $\circ$ Remote}
+  {Android Developer Intern}{Dec 2022 -- Mar 2023}
+  \vspace{2pt}
+\resumeItemListStart
+  \item\small{Refactored codebase from RxJava to Coroutines \& Kotlin Flows, adhering to Clean Architecture principles.}
+  \item\small{Implemented Domain Logic Segregation into distinct packages, enhancing code navigation efficiency by 2x.}
+  \item\small{Utilized SDKs to capture User Events, optimizing UX via Deeplinks \& Deferred Deeplinks.}
+\resumeItemListEnd
 
-
-
-% \resumeItemListEnd
 \resumeSubHeadingListEnd
-
-%-----------PROJECTS-----------------
-
-\vspace{-7pt}
-
-\section{Personal Projects}
-\resumeSubHeadingListStart
-\vspace{2pt}
-
-\resumeSubheading{\MYhref{https://github.com/itsnitish22/ChatRoomFrontEnd}{Chat Room}}{March 2023}
-{Frontend (Kotlin, MVVM, Clean Architecture), Backend (Node.js, Azure,  WebSockets (Socket.IO))}{}
-\begin{itemize}
-	\item \textbf {Emphasis:} Proactive pursuit of diving into WebSockets, driving innovative ChatRoom development. 
-	      \vspace{-2pt}
-	\item \textbf {Features:} A global social platform fostering connections with users worldwide.
-	      \begin{itemize}
-	      	\item{A WebSocket Backend powered by Node.js, hosted on Azure, providing seamless connections and chat experiences.}
-	      	\item{Engaging chat rooms supporting multiple participants, featuring real-time updates on participants joining and leaving events.}
-            \item{Coming Soon: Random Chats, Guess Girl or Boy, Guess Streaks, Coin System, and Redeemable Rewards.}
-	      \end{itemize}
-\end{itemize} 
-\vspace{10pt}
-
-\resumeSubheading{\MYhref{https://github.com/itsnitish22/Sign-Ease}{Sign Ease}}{September 2022}
-{Android (Kotlin, Coroutines, MVVM, NavGraph, Retrofit, Clean Architecture), Hello Sign, Firebase}{}
-\begin{itemize}
-	\item \textbf {Problem:} Hostel students Drafting Leaves/ Applications and getting Approvals/ Refusals manually (signatures). 
-	\item \textbf {Solution:} A tool that gets your leaves signed from the respective authority or parent/ guardian.
-	      \begin{itemize}
-	      	\item{Incorporated Hello Sign APIs for catering backend services and dealing with the Signatures.}
-	      	\item{Pre-built templates and to-the-point manual details help you choose fast and get your approvals faster.}
-            \item{Followed Clean Architecture with MVVM for segregating Domain logic from Data and Views}
-	      \end{itemize}
-\end{itemize} 
-
-\resumeSubheading{\MYhref{https://github.com/itsnitish22/Feedback-Prime}{Feedback Prime}}{October 2021}
-{Android (Kotlin, Coroutines, MVVM, Retrofit, Symbl.ai, SAWO Labs, APIs)}{}
-\begin{itemize}
-	\item \textbf {Problem:} Filling survey/feedback forms after every support call.
-	      \vspace{-2pt}
-	\item \textbf {Solution:} Built an android app for Generating Automated Report of Customer-Executive call.
-	      \begin{itemize}
-	      	\item{Utilized Async APIs by Symbl.ai which uses Conversation Intelligence for analysing the conversation.}
-	      	\item{Followed MVVM Architecture; Used Retrofit;  Recycler View for displaying the generated Report.}
-	      \end{itemize}
-\end{itemize}
-\vspace{-3pt}   
-
-\resumeSubheading{\MYhref{https://github.com/itsnitish22/Suite-Converter}{Suite Converter}}{January 2021}
-{Python, Speech Recognition}{}
-\begin{itemize}
-	\item \textbf {Problem:} Hassle of converting files from one format to another.
-	      \vspace{-2pt}
-	\item \textbf {Solution:} A one stop easy solution with voice assistant for Major File Conversions.  
-	      \begin{itemize}
-	      	\item{Used libraries like docx2pdf, pdf2docx, gTTS, SpeechRecognition and pysttx3 for converstion of files.}
-	      	\item{Auto detects the Directory Path for keeping the files organised.}
-	      \end{itemize}
-\end{itemize}
-\resumeSubHeadingListEnd
-\vspace{0pt}
-
-
-%-----------SKILLS--------------------
-
 
 \vspace{-6pt}
 
+%-----------PROJECTS-----------------
+\section{Personal Projects}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {\MYhref{https://github.com/itsnitish22/ChatRoomFrontEnd}{Chat Room}}{Mar 2023}
+  {Kotlin, MVVM, Clean Architecture, Node.js, Azure, WebSockets (Socket.IO)}{}
+  \vspace{2pt}
+\resumeItemListStart
+  \item\small{Built a global real-time chat platform with WebSocket backend on Node.js hosted on Azure; supports multi-participant rooms with live join/leave events.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {\MYhref{https://github.com/itsnitish22/Sign-Ease}{Sign Ease}}{Sept 2022}
+  {Kotlin, Coroutines, MVVM, NavGraph, Retrofit, Clean Architecture, HelloSign, Firebase}{}
+  \vspace{2pt}
+\resumeItemListStart
+  \item\small{Digital signature tool for hostel students; integrated HelloSign APIs with pre-built templates for fast leave approvals from authorities or guardians.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-6pt}
+
+%-----------SKILLS-----------------
 \section{Technical Skills}
 \resumeSubHeadingListStart
 \vspace{2pt}
-\resumeSubItem{Languages}{~Kotlin, Java, C++, Python, YAML, JavaScript, Node.js, SQL}
-\resumeSubItem{Frameworks/Libraries}{~Room, Retrofit, Flows, Compose, Android Jetpack, Hilt, Koin, Epoxy, DataBinding, PubNub}
-\resumeSubItem{Tools}{~Git, Android Studio, Postman, Jira Software, GitHub Actions, Docker, Azure, RealmDB, Firebase, Proguard}
+\resumeSubItem{Languages}{Kotlin, Java, C++, Python, JavaScript, Node.js, SQL, YAML}
+\resumeSubItem{Frameworks/Libraries}{Media3 ExoPlayer, Google Play Billing, Jetpack Compose, Android Jetpack, Room, Retrofit, Flows, Hilt, Koin, Epoxy, DataBinding, PubNub}
+\resumeSubItem{Tools}{Git, Android Studio, Postman, Jira, GitHub Actions, Docker, Azure, Firebase, RealmDB, Proguard}
 \resumeSubHeadingListEnd
-
-%-----------Achievements-----------------
-
-\vspace{-3pt}
-
-\section{Achievements}
-\begin{itemize}[labelsep=*,label=$\circ$,leftmargin=0.9pc]
-	\item {Won 1st Prize for Sponsor's Track in {\MYhref{https://devpost.com/software/feedback-prime-kbg8um}{API World Hackathon}} by Symbl.ai with the Challange - Go Beyond Speech Recognition with Conversation Intelligence APIs.}
- \vspace{-5pt}
-     \item {Achieved recognition as a Top-10 Finalist in the batch-wide Soft Skills Communication Competition.}
-\vspace{-5pt}
-	\item {Attained the badge of {\MYhref{https://badgr.com/public/assertions/DNG85AU6SYWaX6XO5gkoDw?identity__email=nitish.sharma1186@gmail.com}{Postman Student Expert.}}}
-\end{itemize}
-
-%-----------EDUCATION-----------------
 
 \vspace{-6pt}
 
+%-----------ACHIEVEMENTS-----------------
+\section{Achievements}
+\begin{itemize}[labelsep=*,label=$\circ$,leftmargin=0.9pc,topsep=0pt,itemsep=-1pt]
+  \item\small{Won 1st Prize (Sponsor's Track) at \MYhref{https://devpost.com/software/feedback-prime-kbg8um}{API World Hackathon} by Symbl.ai Go Beyond Speech Recognition with Conversation Intelligence APIs.}
+  \item\small{Top-10 Finalist in batch-wide Soft Skills Communication Competition.}
+  \item\small{Attained \MYhref{https://badgr.com/public/assertions/DNG85AU6SYWaX6XO5gkoDw?identity__email=nitish.sharma1186@gmail.com}{Postman Student Expert} badge.}
+\end{itemize}
+
+\vspace{-6pt}
+
+%-----------EDUCATION-----------------
 \section{Education}
 \resumeSubHeadingListStart
 \resumeSubheading
-{Chandigarh University}{Mohali, Punjab}
-{Bachelor of Engineering - Computer Science}{\textbf{CGPA: 8.33}}
-\vspace{0pt}
-\resumeSubheading
-{Govt. Model Sr. Sec School, 37-B}{Chandigarh}
-{Secondary School Education (Science)}{\textbf{Percentage: 85.6\%}}
-\vspace{0pt}
-\resumeSubheading
-{Stepping Stones Sr. Sec. School, 37-D}{Chandigarh}
-{High School Education}{\textbf{CGPA: 9.20}}
+  {Chandigarh University}{Mohali, Punjab}
+  {Bachelor of Engineering -- Computer Science}{\textbf{CGPA: 8.33}}
 \resumeSubHeadingListEnd
-
 
 \end{document}
